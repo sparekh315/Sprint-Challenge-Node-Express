@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
      .catch(err => res.status(500).json({ error: 'Actions not retrieved'}));
 });
 
+router.post('/', (req, res) => {
+    
+  });
+  
 
 
 
