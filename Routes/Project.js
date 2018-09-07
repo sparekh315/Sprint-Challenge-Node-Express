@@ -25,6 +25,28 @@ router.get('/:id', (req, res) => {
 });
 
 
+router.post('/', (req, res) => {
+    
+});
+
+router.put('/:id', (req, res) => {
+
+});
+
+
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+    project
+      .remove(id)
+      .then(project => {
+        if (project) {
+          res.status(200).json({message: 'Project succesfully deleted'})
+        } else {
+          res.status(404).json({ errMsg: `Project not found` });
+        }
+      })
+      .catch(err => res.status(500).json({ error: 'Project could not be deleted' }));
+  });
 
 
 

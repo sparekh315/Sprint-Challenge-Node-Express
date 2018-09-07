@@ -21,6 +21,6 @@ server.use('/projects', projectRoute);
 server.use('/', (req, res) => {
     res.send('Hello');
 });
-server.use()
+
 
 server.listen(8000, () => console.log('\n== API on port 8k ==\n'));
